@@ -8,7 +8,6 @@ export class PreloadScene extends Phaser.Scene {
       key: SCENE_KEYS.PRELOAD_SCENE,
       active: true,
     });
-    console.log(SCENE_KEYS.PRELOAD_SCENE);
   }
 
   preload() {
@@ -53,6 +52,6 @@ export class PreloadScene extends Phaser.Scene {
   }
 
   create() {
-    this.add.image(0,0, BATTLE_BACKGROUND_ASSET_KEYS.FOREST).setOrigin(0);
+    this.scene.start(SCENE_KEYS.BATTLE_SCENE);
   }
 }
